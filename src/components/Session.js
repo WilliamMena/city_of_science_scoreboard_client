@@ -1,21 +1,16 @@
 import React from 'react';
-
+import PlayerScore from './PlayerScore.js'
 
 
 const Session = (sessions) =>
   <div>
-    {console.log(sessions.data)}
     {sessions.data.map((session, index) =>
       <div key={index}>
-        Game {session.id}
+        <h2>Game {session.id}</h2>
         <ul>
-          <br />
           {session.players.map((player, index) =>
-            <li>
-              {player.name} scored {player.score} points!
-            </li>
+            <PlayerScore key={index} player={player} />
           )}
-          <br />
         </ul>
       </div>
     )}
