@@ -1,13 +1,14 @@
 import React from 'react';
 import Session from '../components/Session.js'
 
+const SessionsAPI = 'http://localhost:3001/api/sessions'
 
 class SessionList extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-      sessions: [2]
+      sessions: []
     }
 
     // sessions: [
@@ -32,6 +33,12 @@ class SessionList extends React.Component {
     // ]
   }
 
+  componentDidMount() {
+    fetch(SessionsAPI)
+      .then(response => response.json())
+      .then(data => this.setState({ sessions: data }))
+      // .then(data => console.log(data))
+  }
 
   render() {
     return (
