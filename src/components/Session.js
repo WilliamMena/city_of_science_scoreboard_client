@@ -14,10 +14,6 @@ const Session = (sessions) =>
         <ul>
         <h2>Game {session.id}</h2>
         <sub>{fullDate(session.created_at).slice(0,36)}</sub>
-        {
-          // {console.log(session)}
-        }
-
           {session.players.map((player, index) =>
             <PlayerScore key={index} player={player} />
           )}

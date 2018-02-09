@@ -26,3 +26,12 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+ul li.inline {
+  display: inline;
+  padding: 5px;
+}
+
+a.header {
+  color: white;
+}

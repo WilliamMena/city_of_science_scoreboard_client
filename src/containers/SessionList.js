@@ -1,6 +1,7 @@
 import React from 'react';
 import Session from '../components/Session.js'
 
+
 const SessionsAPI = 'http://localhost:3001/api/sessions'
 
 class SessionList extends React.Component {
@@ -21,7 +22,8 @@ class SessionList extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="App-intro">
+        <a href="/sessions/1"> Link to first session </a>
           <Session data={this.state.sessions} />
       </div>
     )
