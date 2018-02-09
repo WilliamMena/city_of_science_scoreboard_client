@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import logo from './WSF_Logo_300x300.jpg'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+
+import { getSessions } from './actions/sessions.js'
 
 import SessionList from './containers/SessionList.js'
 import SessionDisplay from './components/SessionDisplay.js'
@@ -24,6 +27,13 @@ import Home from './components/Home.js'
 // }
 
 class App extends Component {
+
+  componentDidMount() {
+    this.props.getSessions()
+  }
+
+
+
   render() {
     return (
       <Router>
@@ -47,4 +57,10 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return ({
+    sessions: state.sessions
+  })
+}
+
+export default connect(mapStateToProps, {getSessions})(App);
