@@ -49,7 +49,10 @@ class App extends Component {
 
 
           <Route exact path="/" component={Home}/>
-          <Route exact path="/sessions" component={SessionList}/>
+          {
+            // <Route exact path="/sessions" component={SessionList}/>
+          }
+          <Route exact path="/sessions" render={() => <SessionList sessions={this.props.sessions} />} />
           <Route exact path="/sessions/:sessionId" component={SessionDisplay}/>
         </div>
       </Router>
