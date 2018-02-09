@@ -1,5 +1,6 @@
 import React from 'react';
 import PlayerScore from './PlayerScore.js'
+import { Link } from 'react-router-dom'
 
 const fullDate = (data) => {
   const date = Date.parse(data)
@@ -12,8 +13,16 @@ const Session = (sessions) =>
     {sessions.data.map((session, index) =>
       <div key={index}>
         <ul>
-        <h2>Game {session.id}</h2>
-        <sub>{fullDate(session.created_at).slice(0,36)}</sub>
+          <h2>
+            <Link to={`/${session.id}`}>Game {session.id}</ Link>
+          </h2>
+          <sub>
+            {fullDate(session.created_at).slice(0,36)}
+          </sub>
+
+          <h4>This will change! Will adjust to only show the highest scoring.</h4>
+
+
           {session.players.map((player, index) =>
             <PlayerScore key={index} player={player} />
           )}
