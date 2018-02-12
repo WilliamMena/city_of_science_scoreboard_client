@@ -34,7 +34,11 @@ class SessionDisplay extends Component {
 
   displayPlayers = (players) => {
     var allPlayers = players.map(player => {
-      return <PlayerScore player={player} />
+      return(
+        <div key={player.id}>
+          <PlayerScore player={player} />
+        </div>
+      )
     })
     return(
       <ul>
