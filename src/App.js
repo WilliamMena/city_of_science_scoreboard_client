@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 import { getSessions } from './actions/sessions.js'
 
 import SessionList from './containers/SessionList.js'
-import SessionDisplay from './components/SessionDisplay.js'
+import SessionDisplay from './containers/SessionDisplay.js'
 import Home from './components/Home.js'
 
 // class App extends Component {

@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
 
+import PlayerScore from '../components/PlayerScore.js'
+
 class SessionDisplay extends Component {
 
   constructor(props) {
@@ -17,12 +19,36 @@ class SessionDisplay extends Component {
     })
   }
 
+  // displayPlayers = (players) => {
+  //   const allPlayers = players.map(player => {
+  //     console.log(player)
+  //     return <PlayerScore />
+  //   })
+  //   debugger
+  //   return (
+  //     <ul>
+  //       {allPlayers.join()}
+  //     </ul>
+  //   )
+  // }
+
+  displayPlayers = (players) => {
+    var allPlayers = players.map(player => {
+      return <PlayerScore player={player} />
+    })
+    return(
+      <ul>
+        {allPlayers}
+      </ul>
+    )
+  }
 
   render() {
     return (
       <div>
         ID: {this.props.session.id}
-        {console.log(this.props.session)}
+
+        {this.props.session.players ? this.displayPlayers(this.props.session.players) : "No players yet"}
       </div>
     )
   }
