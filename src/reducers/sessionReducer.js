@@ -1,8 +1,8 @@
-const initialState = {
+const initialState = [{
   id: false,
   created_at: false,
   players: []
-}
+}]
 
 export default function sessionsReducer(state = initialState, action) {
   switch(action.type) {
