@@ -39,7 +39,7 @@ const whatToDisplay = (sessions) => {
           <div key={index}>
             <ul>
               <h2>
-                <Link to={`/${session.id}`}>Game {session.id}</ Link>
+                <Link to={`/sessions/${session.id}`}>Game {session.id}</ Link>
               </h2>
               <sub>
                 {fullDate(session.created_at).slice(0,36)}
