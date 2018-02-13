@@ -9,6 +9,9 @@ export default function sessionsReducer(state = initialState, action) {
     case "GET_SESSIONS_SUCCESS":
       return action.sessions
 
+    case "CREATE_PLAYER_SUCCESS":
+      return action.sessions
+
     default:
       return state;
   }

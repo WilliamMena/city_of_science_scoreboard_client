@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux'
 
 import PlayerScore from '../components/PlayerScore.js'
+import PlayerForm from '../components/PlayerForm.js'
 
 class SessionDisplay extends Component {
 
@@ -19,18 +20,6 @@ class SessionDisplay extends Component {
     })
   }
 
-  // displayPlayers = (players) => {
-  //   const allPlayers = players.map(player => {
-  //     console.log(player)
-  //     return <PlayerScore />
-  //   })
-  //   debugger
-  //   return (
-  //     <ul>
-  //       {allPlayers.join()}
-  //     </ul>
-  //   )
-  // }
 
   displayPlayers = (players) => {
     var allPlayers = players.map(player => {
@@ -50,9 +39,14 @@ class SessionDisplay extends Component {
   render() {
     return (
       <div>
-        ID: {this.props.session.id}
+        <div className="scoreboard_display">
+          ID: {this.props.session.id}
 
-        {this.props.session.players ? this.displayPlayers(this.props.session.players) : "No players yet"}
+          {this.props.session.players ? this.displayPlayers(this.props.session.players) : "No players yet"}
+        </div>
+        <div className="scoreboard_form">
+          <PlayerForm session_id={this.props.session.id}/>
+        </div>
       </div>
     )
   }
