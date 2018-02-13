@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
-import {createPlayer} from '../actions/sessions.js'
+import {createPlayer} from '../actions/player.js'
 import {updatePlayerFormData} from '../actions/sessionPlayerForm.js'
 
 class PlayerForm extends Component {
@@ -22,14 +22,14 @@ class PlayerForm extends Component {
   }
 
   handleOnClick = () => {
-    debugger
+    this.props.createPlayer(this.props.playerForm)
   }
 
   render() {
     const {name, score} = this.props.playerForm
     return(
       <div>
-        <form>
+        <form onSubmit={() => this.handleOnClick()}>
           <p>
             <label>ADD A NEW PLAYER</label>
             <br/>
@@ -42,7 +42,7 @@ class PlayerForm extends Component {
             <input name="score" type="text" value={score} onChange={(event) => this.handleChange(event)} />
             <br/>
 
-            <input type='submit' onClick={() => this.handleOnClick()} />
+            <input type='submit' />
           </p>
         </form>
       </div>
