@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
 import {createPlayer} from '../actions/player.js'
-import {updatePlayerFormData} from '../actions/sessionPlayerForm.js'
+import {updatePlayerFormData, resetFormData} from '../actions/sessionPlayerForm.js'
 
 class PlayerForm extends Component {
   constructor(props) {
@@ -24,6 +24,7 @@ class PlayerForm extends Component {
   handleOnSubmit = (event) => {
     event.preventDefault()
     this.props.createPlayer(this.props.playerForm)
+    this.props.resetFormData()
   }
 
   render() {
@@ -71,4 +72,4 @@ const mapStateToProps = (state, ownProps) => {
 
 }
 
-export default connect(mapStateToProps, {createPlayer, updatePlayerFormData})(PlayerForm);
+export default connect(mapStateToProps, {createPlayer, updatePlayerFormData, resetFormData})(PlayerForm);

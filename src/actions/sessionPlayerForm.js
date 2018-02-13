@@ -4,3 +4,9 @@ export const updatePlayerFormData = currentPlayerFormData => {
     currentPlayerFormData
   }
 }
+
+export const resetFormData = () => {
+  return {
+    type: "RESET_FORM_DATA"
+  }
+}
