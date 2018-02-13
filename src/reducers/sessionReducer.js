@@ -19,6 +19,8 @@ export default function sessionsReducer(state = initialState, action) {
 
       // return Object.assign([], state.slice(0, index), state.slice(index,-1)).concat(updatedSession)
       return Object.assign([], newState)
+    case 'ADD_SESSION_SUCCESS':
+      return Object.assign([], state).concat(action.session)
 
     default:
       return state;

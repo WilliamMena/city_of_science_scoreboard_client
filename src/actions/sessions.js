@@ -12,6 +12,13 @@ const setSessions = sessions => {
   }
 }
 
+const addSession = session => {
+  return {
+    type: "ADD_SESSION_SUCCESS",
+    session
+  }
+}
+
 // Async actions
 
 export const getSessions = () => {
@@ -22,5 +29,16 @@ export const getSessions = () => {
         dispatch(setSessions(sessions))
       })
       .catch(error => console.log(error))
+  }
+}
+
+export const createSession = () => {
+  return dispatch => {
+    return fetch(`${API_URL}/sessions`, {
+      method: "POST",
+      headers: {"Content-Type": "application/json"}
+    }).then(response => response.json())
+    .then(session => dispatch(addSession(session)))
+    .catch(error => console.log(error))
   }
 }
