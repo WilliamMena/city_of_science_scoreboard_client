@@ -37,11 +37,11 @@ class PlayerForm extends Component {
             <br/>
 
             <label>Player</label>
-            <input name="name" type="text" value={name} onChange={(event) => this.handleChange(event)} />
+            <input name="name" type="text" value={name} autocomplete="off" onChange={(event) => this.handleChange(event)} />
             <br/>
 
             <label>Score</label>
-            <input name="score" type="text" value={score} onChange={(event) => this.handleChange(event)} />
+            <input name="score" type="text" value={score} autocomplete="off" onChange={(event) => this.handleChange(event)} />
             <br/>
 
             <input type='submit' />
