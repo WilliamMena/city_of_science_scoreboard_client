@@ -21,7 +21,8 @@ class PlayerForm extends Component {
     this.props.updatePlayerFormData(currentPlayerFormData)
   }
 
-  handleOnClick = () => {
+  handleOnSubmit = (event) => {
+    event.preventDefault()
     this.props.createPlayer(this.props.playerForm)
   }
 
@@ -29,7 +30,7 @@ class PlayerForm extends Component {
     const {name, score} = this.props.playerForm
     return(
       <div>
-        <form onSubmit={() => this.handleOnClick()}>
+        <form onSubmit={(e) => this.handleOnSubmit(e)}>
           <p>
             <label>ADD A NEW PLAYER</label>
             <br/>

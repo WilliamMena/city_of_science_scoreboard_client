@@ -15,7 +15,8 @@ export const createPlayer = (player) => {
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify({name: player.name, score: player.score, session_id: player.session_id})
-    }).then(response => dispatch(addPlayer(response)))
+    }).then(response => response.json())
+    .then(response => dispatch(addPlayer(response)))
     .catch(error => console.log(error))
   }
 }
