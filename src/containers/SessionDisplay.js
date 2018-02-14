@@ -24,16 +24,20 @@ class SessionDisplay extends Component {
   displayPlayers = (players) => {
     var allPlayers = players.map(player => {
       return(
-        <div key={player.id}>
-          <PlayerScore player={player} />
-        </div>
+        <PlayerScore key={player.id} player={player} />
       )
     })
     return(
-      <ul>
-        ID: {this.props.session.id}
+      <table>
+        <tbody>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Score</th>
+        </tr>
         {allPlayers}
-      </ul>
+        </tbody>
+      </table>
     )
   }
 

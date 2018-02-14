@@ -55,6 +55,10 @@ a.header {
   text-align: center;
 }
 
+table {
+  width: 100%;
+}
+
 .scoreboard_form {
   background-color: #c2f0c2;
   /* width: 200px; */

@@ -14,21 +14,19 @@ const whatToDisplay = (sessions) => {
       <div>
         {sessions.data.map((session, index) =>
           <div key={index}>
-            <ul>
-              <h2>
-                <Link to={`/sessions/${session.id}`}>Game {session.id}</ Link>
-              </h2>
-              <sub>
-                {fullDate(session.created_at).slice(0,36)}
-              </sub>
+            <h2>
+              <Link to={`/sessions/${session.id}`}>Game {session.id}</ Link>
+            </h2>
+            <sub>
+              {fullDate(session.created_at).slice(0,36)}
+            </sub>
 
-              <h4>This will change! Will adjust to only show the highest scoring.</h4>
+            <h4>This will change! Will adjust to only show the highest scoring.</h4>
 
 
-              {session.players.map((player, index) =>
-                <PlayerScore key={index} player={player} />
-              )}
-            </ul>
+            {session.players.map((player, index) =>
+              <PlayerScore key={index} player={player} />
+            )}
           </div>
         )}
       </div>
