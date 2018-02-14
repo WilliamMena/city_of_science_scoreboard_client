@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Home = () =>
-  <div>
+  <div className="App-intro">
   <h1>INSTRUCTIONS</h1>
     Instructions and stuff
     <br />

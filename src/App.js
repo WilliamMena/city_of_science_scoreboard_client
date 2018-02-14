@@ -10,22 +10,6 @@ import SessionList from './containers/SessionList.js'
 import SessionDisplay from './containers/SessionDisplay.js'
 import Home from './components/Home.js'
 
-// class App extends Component {
-//   render() {
-//     return (
-//       <div className="App">
-//         <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo"/>
-//           <h1 className="App-title">WSF Scoreboard</h1>
-//         </header>
-//         <div className="App-intro">
-//           <SessionList />
-//         </div>
-//       </div>
-//     );
-//   }
-// }
-
 class App extends Component {
 
   componentDidMount() {

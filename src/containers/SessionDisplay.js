@@ -31,6 +31,7 @@ class SessionDisplay extends Component {
     })
     return(
       <ul>
+        ID: {this.props.session.id}
         {allPlayers}
       </ul>
     )
@@ -38,9 +39,8 @@ class SessionDisplay extends Component {
 
   render() {
     return (
-      <div>
+      <div className="scoreboard">
         <div className="scoreboard_display">
-          ID: {this.props.session.id}
 
           {this.props.session.players ? this.displayPlayers(this.props.session.players) : "No players yet"}
         </div>
