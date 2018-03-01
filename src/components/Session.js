@@ -1,6 +1,6 @@
 import React from 'react';
-import PlayerScore from './PlayerScore.js'
 import { Link } from 'react-router-dom'
+import HighestScore from './HighestScore.js'
 
 const fullDate = (data) => {
   const date = Date.parse(data)
@@ -23,10 +23,7 @@ const whatToDisplay = (sessions) => {
 
             <h4>This will change! Will adjust to only show the highest scoring.</h4>
 
-
-            {session.players.map((player, index) =>
-              <PlayerScore key={index} player={player} />
-            )}
+            <HighestScore players={session.players} />
           </div>
         )}
       </div>
