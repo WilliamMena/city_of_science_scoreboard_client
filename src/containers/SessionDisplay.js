@@ -22,16 +22,17 @@ class SessionDisplay extends Component {
 
 
   displayPlayers = (players) => {
-    var allPlayers = players.map(player => {
+    var playersInOrderByScore = players.sort((a, b) => b.score - a.score)
+    var allPlayers = playersInOrderByScore.map((player, index) => {
       return(
-        <PlayerScore key={player.id} player={player} />
+        <PlayerScore key={player.id} player={player} index={index} />
       )
     })
     return(
       <table>
         <tbody>
         <tr>
-          <th>ID</th>
+          <th>Ranking</th>
           <th>Name</th>
           <th>Score</th>
         </tr>

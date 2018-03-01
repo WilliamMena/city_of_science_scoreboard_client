@@ -17,7 +17,6 @@ const HighestScore = (allScores) => {
 
   // Sorting the array and displaying the highest or the first score in that array can partially work due to the face that it shows me the actual highest score but the only problem with this is that I have to make sure to create a function that will also check the next few players to keep them in the score. But this will work with the ranking system, the actual scoreboard.
 
-  console.log(playersInOrderByScore[0])
   if (playersInOrderByScore.length) {
     return `${playersInOrderByScore[0].name} had the highest score of ${playersInOrderByScore[0].score}`
   } else {
