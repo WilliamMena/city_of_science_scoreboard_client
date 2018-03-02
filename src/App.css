@@ -66,3 +66,12 @@ table {
   grid-row: 1;
   text-align: center;
 }
+th {
+  font-size: large;
+}
+
+#rank_1 {
+  color: red;
+  /* background: grey; */
+  font-weight: bolder;
+}
