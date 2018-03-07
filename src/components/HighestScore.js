@@ -1,5 +1,3 @@
-import React from 'react';
-
 const HighestScore = (allScores) => {
 
   var playersInOrderByScore = allScores.players.sort((a, b) => b.score - a.score)

@@ -1,3 +1,10 @@
+@font-face {
+font-family: "ErbosDraco Nova Open NBP";
+src:
+url("css/fonts/erbosdraco_nova_open_nbp.ttf") format("ttf"),
+url("css/fonts/erbosdraco_nova_nbp.ttf") format("ttf");
+}
+
 .App {
 
 }
@@ -47,6 +54,7 @@ a.header {
 }
 
 .scoreboard_display {
+  /* font-family: 'ErbosDraco Nova Open NBP', Arial, sans-serif; */
   background-color: #ffb3b3;
   padding: 20px;
   /* width: 200px; */

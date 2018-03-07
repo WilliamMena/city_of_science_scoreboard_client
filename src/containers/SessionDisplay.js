@@ -28,6 +28,8 @@ class SessionDisplay extends Component {
         <PlayerScore key={player.id} player={player} index={index} />
       )
     })
+
+      // Loop all the players. What I would like to check is if the score of the player that we're on right now is the exact score of the previous player, then the rank is the same rank as the previous score. If it's NOT the same score, then the persons rank is equal to index+1
     return(
       <table>
         <tbody>
@@ -41,6 +43,24 @@ class SessionDisplay extends Component {
       </table>
     )
   }
+
+  // displayerPlayersExperiment = (players) => {
+  //   var allPlayers = "Hello"
+  //   return(
+  //     <table>
+  //       <p>Experiment Display</p>
+  //       <tbody>
+  //       <tr>
+  //         <th>Ranking</th>
+  //         <th>Name</th>
+  //         <th>Score</th>
+  //       </tr>
+  //       {allPlayers}
+  //       </tbody>
+  //     </table>
+  //   )
+  // }
+
 
   render() {
     return (
