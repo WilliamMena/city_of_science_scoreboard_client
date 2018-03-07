@@ -8,6 +8,7 @@ import { getSessions } from './actions/sessions.js'
 
 import SessionList from './containers/SessionList.js'
 import SessionDisplay from './containers/SessionDisplay.js'
+import SessionScoreboard from './containers/SessionScoreboard.js'
 import Home from './components/Home.js'
 
 class App extends Component {
@@ -38,6 +39,7 @@ class App extends Component {
           }
           <Route exact path="/sessions" render={() => <SessionList sessions={this.props.sessions} />} />
           <Route exact path="/sessions/:sessionId" component={SessionDisplay}/>
+          <Route exact path="/sessions/:sessionId/scoreboard" component={SessionScoreboard}/>
         </div>
       </Router>
     );
