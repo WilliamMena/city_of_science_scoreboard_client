@@ -5,8 +5,8 @@ import PlayerScore from '../components/PlayerScore.js'
 
 class SessionScoreboard extends Component {
 
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
 
     this.state = {
       loading: true
@@ -43,6 +43,7 @@ class SessionScoreboard extends Component {
           {allPlayers}
           </tbody>
         </table>
+        <meta http-equiv="refresh" content="10" />
       </div>
     )
   }
