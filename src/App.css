@@ -65,12 +65,20 @@ a.header {
 
 .scoreboard_display_only {
   font-family: 'ErbosDraco Nova Open NBP', Arial, sans-serif;
-  font-size: large;
+
+  background: black;
+  color: white;
+  font-size: 200%;
   padding: 20px;
   /* width: 200px; */
   grid-column: 1 / 5;
   grid-row: 1;
   text-align: center;
+  letter-spacing: -2px;
+}
+
+.scoreboard_display_only h2 {
+  color: red;
 }
 
 
@@ -91,7 +99,7 @@ th {
 }
 
 #rank_1 {
-  color: red;
+  color: #00c2ff;
   /* background: grey; */
   font-weight: bolder;
 }

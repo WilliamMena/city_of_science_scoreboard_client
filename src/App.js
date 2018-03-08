@@ -23,6 +23,8 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+        {
+          /*
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo"/>
             <h1 className="App-title">WSF Scoreboard</h1>
@@ -31,6 +33,16 @@ class App extends Component {
               <li className="inline"><Link className="header" to='/sessions'>Sessions</Link></li>
             </ul>
           </header>
+          */
+        }
+
+        {
+          /*
+          <header className="App-header">
+            <h1></h1>
+          </header>
+          */
+        }
 
 
           <Route exact path="/" component={Home}/>

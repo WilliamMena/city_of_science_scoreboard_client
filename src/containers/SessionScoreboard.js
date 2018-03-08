@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux'
 
 import PlayerScore from '../components/PlayerScore.js'
-import PlayerForm from '../components/PlayerForm.js'
 
 class SessionScoreboard extends Component {
 
@@ -31,16 +30,20 @@ class SessionScoreboard extends Component {
 
       // Loop all the players. What I would like to check is if the score of the player that we're on right now is the exact score of the previous player, then the rank is the same rank as the previous score. If it's NOT the same score, then the persons rank is equal to index+1
     return(
-      <table>
-        <tbody>
-        <tr>
-          <th>Ranking</th>
-          <th>Name</th>
-          <th>Score</th>
-        </tr>
-        {allPlayers}
-        </tbody>
-      </table>
+      <div>
+        <h2>WARPED SPACE GRAVITY SIMULATOR</h2>
+        <h2>SCOREBOARD</h2>
+        <table>
+          <tbody>
+          <tr>
+            <th>Ranking</th>
+            <th>Name</th>
+            <th>Score</th>
+          </tr>
+          {allPlayers}
+          </tbody>
+        </table>
+      </div>
     )
   }
 
@@ -77,7 +80,6 @@ class SessionScoreboard extends Component {
 const mapStateToProps = (state, ownProps) => {
 
   const session = state.sessions.find(session => session.id == ownProps.match.params.sessionId)
-
   if (session) {
     return { session }
   } else {
