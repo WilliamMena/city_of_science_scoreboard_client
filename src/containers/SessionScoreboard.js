@@ -48,7 +48,7 @@ class SessionScoreboard extends Component {
           <meta httpEquiv="refresh" content="10" />
           */
         }
-        {<meta httpEquiv="refresh" content="6" />}
+
       </div>
     )
   }

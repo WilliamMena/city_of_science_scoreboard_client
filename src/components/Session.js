@@ -11,7 +11,7 @@ const fullDate = (data) => {
 const whatToDisplay = (sessions) => {
   if (sessions.data[0]) {
     return(
-      <div class='session'>
+      <div>
         {sessions.data.map((session, index) =>
           <div key={index}>
             <h2>

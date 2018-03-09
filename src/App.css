@@ -44,10 +44,6 @@ url("css/fonts/erbosdraco_nova_nbp.ttf") format("ttf");
   visibility: hidden;
 }
 
-.session {
-  color: white;
-}
-
 ul li.inline {
   display: inline;
   padding: 5px;
