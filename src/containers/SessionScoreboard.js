@@ -5,8 +5,8 @@ import PlayerScore from '../components/PlayerScore.js'
 
 class SessionScoreboard extends Component {
 
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     this.state = {
       loading: true
@@ -43,7 +43,11 @@ class SessionScoreboard extends Component {
           {allPlayers}
           </tbody>
         </table>
-        <meta http-equiv="refresh" content="10" />
+        {
+          /*
+          <meta http-equiv="refresh" content="10" />
+          */
+        }
       </div>
     )
   }
@@ -68,18 +72,17 @@ class SessionScoreboard extends Component {
 
   render() {
     return (
-      <div className="scoreboard">
         <div className="scoreboard_display_only">
-
           {this.props.session.players ? this.displayPlayers(this.props.session.players) : "No players yet"}
+          <div className="hidden">
+            {document.body.style.backgroundColor="black"}
+          </div>
         </div>
-      </div>
     )
   }
 }
 
 const mapStateToProps = (state, ownProps) => {
-
   const session = state.sessions.find(session => session.id == ownProps.match.params.sessionId)
   if (session) {
     return { session }

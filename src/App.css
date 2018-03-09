@@ -36,6 +36,18 @@ url("css/fonts/erbosdraco_nova_nbp.ttf") format("ttf");
   to { transform: rotate(360deg); }
 }
 
+/* html {
+  background-color: black;
+} */
+
+.hidden {
+  visibility: hidden;
+}
+
+.session {
+  color: white;
+}
+
 ul li.inline {
   display: inline;
   padding: 5px;
@@ -65,7 +77,6 @@ a.header {
 
 .scoreboard_display_only {
   font-family: 'ErbosDraco Nova Open NBP', Arial, sans-serif;
-
   background: black;
   color: white;
   font-size: 200%;
@@ -81,10 +92,18 @@ a.header {
   color: red;
 }
 
+.blackBG {
+  background-color: black;
+}
+
 
 
 table {
   width: 100%;
+}
+
+th {
+  font-size: large;
 }
 
 .scoreboard_form {
@@ -93,9 +112,6 @@ table {
   grid-column: 1 / 2;
   grid-row: 1;
   text-align: center;
-}
-th {
-  font-size: large;
 }
 
 #rank_1 {
