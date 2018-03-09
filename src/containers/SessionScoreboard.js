@@ -45,9 +45,10 @@ class SessionScoreboard extends Component {
         </table>
         {
           /*
-          <meta http-equiv="refresh" content="10" />
+          <meta httpEquiv="refresh" content="10" />
           */
         }
+        {<meta httpEquiv="refresh" content="6" />}
       </div>
     )
   }
@@ -73,7 +74,7 @@ class SessionScoreboard extends Component {
   render() {
     return (
         <div className="scoreboard_display_only">
-          {this.props.session.players ? this.displayPlayers(this.props.session.players) : "No players yet"}
+          {this.props.session.players ? this.displayPlayers(this.props.session.players) : ""}
           <div className="hidden">
             {document.body.style.backgroundColor="black"}
           </div>
