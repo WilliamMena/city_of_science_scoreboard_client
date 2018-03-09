@@ -78,7 +78,7 @@ class SessionDisplay extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-
+  // eslint-disable-next-line
   const session = state.sessions.find(session => session.id == ownProps.match.params.sessionId)
 
   if (session) {

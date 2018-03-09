@@ -10,8 +10,10 @@ export default function sessionsReducer(state = initialState, action) {
       return action.sessions
 
     case "CREATE_PLAYER_SUCCESS":
+      // eslint-disable-next-line
       var currentSession = state.find(session => session.id == action.player.session.id)
       var updatedSession = Object.assign({}, currentSession, {players: currentSession.players.concat(action.player)})
+      // eslint-disable-next-line
       var index = state.findIndex(session => session == currentSession)
 
       var newState = state
