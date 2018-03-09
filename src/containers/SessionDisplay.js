@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
 
-import PlayerScore from '../components/PlayerScore.js'
+import PlayerScorebackend from '../components/PlayerScoreBackend.js'
 import PlayerForm from '../components/PlayerForm.js'
 
 class SessionDisplay extends Component {
@@ -25,7 +25,7 @@ class SessionDisplay extends Component {
     var playersInOrderByScore = players.sort((a, b) => b.score - a.score)
     var allPlayers = playersInOrderByScore.map((player, index) => {
       return(
-        <PlayerScore key={player.id} player={player} index={index} />
+        <PlayerScorebackend key={player.id} player={player} index={index} />
       )
     })
 
